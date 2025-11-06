@@ -162,3 +162,4 @@ move_fonts
 create_kitty_files
 p10k_install
 p10k_conf
+extra_programs
