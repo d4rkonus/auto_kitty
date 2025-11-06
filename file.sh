@@ -143,6 +143,16 @@ p10k_conf(){
     fi
 }
 
+extra_programs(){
+    echo -e "${blueColour}[+] Installing some extra tools...${endColour}"
+    apt install -y bacula-console-qt >/dev/null 2>&1
+    sudo dpkg -i "$ruta/lsd.deb" >/dev/null 2>&1
+    cp "$ruta/.zshrc" "/home/$target_user/.zshrc" >/dev/null 2>&1
+    rm /root/.zshrc >/dev/null 2>&1
+    ln -s "/home/$target_user/.zshrc" /root/.zshrc >/dev/null 2>&1
+    echo -e "${greenColour}[✓] Extra tools installed.${endColour}\n" 
+}
+
 # Execution
 #----------------------------------------------
 check_root_user
