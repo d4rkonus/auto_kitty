@@ -150,6 +150,7 @@ extra_programs(){
     cp "$ruta/.zshrc" "/home/$target_user/.zshrc" >/dev/null 2>&1
     rm /root/.zshrc >/dev/null 2>&1
     ln -s "/home/$target_user/.zshrc" /root/.zshrc >/dev/null 2>&1
+    apt install -y micro bat >/dev/null 2>&1
     echo -e "${greenColour}[✓] Extra tools installed.${endColour}\n" 
 }
 
